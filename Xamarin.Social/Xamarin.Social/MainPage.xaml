@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin.Social"
+             x:Class="Xamarin.Social.MainPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="youtube"/>
+            <Entry Placeholder="Enter with channel ID" x:Name="txtYoutube" WidthRequest="220"/>
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                <Label Text="Subscribers " HorizontalTextAlignment="End"/>
+                <Label x:Name="lblYoutube" HorizontalTextAlignment="End"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="instagram"/>
+            <Entry Placeholder="Enter with instagram name" x:Name="txtInstagram" WidthRequest="220"/>
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                <Label Text="Followers " HorizontalTextAlignment="End"/>
+                <Label x:Name="lblInstagram" HorizontalTextAlignment="End"/>
+            </StackLayout>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="facebook"/>
+            <Entry Placeholder="Enter with Facebook page name" x:Name="txtFacebook" WidthRequest="220"/>
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                <Label Text="Likes " HorizontalTextAlignment="End"/>
+                <Label x:Name="lblFacebook" HorizontalTextAlignment="End"/>
+            </StackLayout>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="twitter"/>
+            <Entry Placeholder="Enter with twitter name" x:Name="txtTwitter" WidthRequest="220"/>
+            <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand">
+                <Label Text="Followers " HorizontalTextAlignment="End"/>
+                <Label x:Name="lblTwitter" HorizontalTextAlignment="End" />
+            </StackLayout>
+
+        </StackLayout>
+        <Button x:Name="btnGet" Clicked="BtnGet_Clicked" Text="Get" />
+    </StackLayout>
+
+</ContentPage>
