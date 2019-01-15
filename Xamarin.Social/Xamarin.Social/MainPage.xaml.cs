@@ -9,6 +9,8 @@ namespace Xamarin.Social
     public partial class MainPage : ContentPage
     {
         private string youtubeKey = "[GOOGLE API KEY HERE!!!]";
+        private string facebookKey = "[FACEBOOK KEY HERE!!!]";
+
         private HttpClient client = new HttpClient();
 
         public MainPage()
@@ -73,6 +75,22 @@ namespace Xamarin.Social
             catch
             {
                 lblInstagram.Text = "0";
+            }
+        }
+
+        private async Task GetFacebookLikes()
+        {
+            var url = $"https://graph.facebook.com/{txtFacebook.Text}?fields=fan_count&access_token={facebookKey}";
+
+            try
+            {
+                var response = await client.GetStringAsync(url);
+                var result = JObject.Parse(response);
+                lblFacebook.Text = result["fan_count"].ToString();
+            }
+            catch
+            {
+                lblFacebook.Text = "0";
             }
         }
     }
